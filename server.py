@@ -103,21 +103,21 @@ class DocumentationIndexer:
     
     async def search_docs(self, query: str, site: str = None) -> List[Dict]:
         """Search indexed documentation"""
-        if not self.indexed_docs:
+        if not self.cached_pages:
             return []
         
         query_lower = query.lower()
         results = []
         
-        for url, doc in self.indexed_docs.items():
+        for url, page in self.cached_pages.items():
             # Filter by site if specified
-            if site and doc['site'] != site:
+            if site and page.site != site:
                 continue
             
             # Calculate relevance score
             score = 0
-            title_lower = doc['title'].lower()
-            content_lower = doc['content'].lower()
+            title_lower = page.title.lower()
+            content_lower = page.content.lower()
             
             # Higher score for title matches
             if query_lower in title_lower:
@@ -140,12 +140,12 @@ class DocumentationIndexer:
             
             if score > 0:
                 # Extract snippet around first match
-                snippet = self._extract_snippet(doc['content'], query, max_length=200)
+                snippet = self._extract_snippet(page.content, query, max_length=200)
                 
                 results.append({
-                    'title': doc['title'],
-                    'url': doc['url'],
-                    'site': doc['site'],
+                    'title': page.title,
+                    'url': page.url,
+                    'site': page.site,
                     'snippet': snippet,
                     'score': score
                 })

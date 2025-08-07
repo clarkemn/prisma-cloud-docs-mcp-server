@@ -1,7 +1,7 @@
 [project]
 name = "prisma-cloud-docs-mcp-server"
 version = "1.0.0"
-description = "Prisma Cloud Docs MCP Server"
+description = "MCP server providing search access to Prisma Cloud documentation"
 readme = "README.md"
 authors = [
     { name = "Matt Clarke", email = "futurebird1@protonmail.com" }
@@ -9,6 +9,8 @@ authors = [
 license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
 ]
 requires-python = ">=3.12"
 dependencies = [
@@ -18,3 +20,15 @@ dependencies = [
     "fastmcp>=0.1.0",
     "uvicorn>=0.34.0"
 ]
+
+[project.scripts]
+prisma-cloud-docs-mcp-server = "server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.urls]
+"Homepage" = "https://github.com/clarkemn/prisma-cloud-docs-mcp-server"
+"Bug Reports" = "https://github.com/clarkemn/prisma-cloud-docs-mcp-server/issues"
+"Source" = "https://github.com/clarkemn/prisma-cloud-docs-mcp-server"
