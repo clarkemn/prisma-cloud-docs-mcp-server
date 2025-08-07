@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "Prisma Cloud Docs": {
+      "command": "uv",
+      "args": ["run", "python", "server.py"],
+      "cwd": "/path/to/prisma-cloud-docs-mcp-server",
+      "env": {},
+      "transport": "stdio"
+    }
+  }
+}
