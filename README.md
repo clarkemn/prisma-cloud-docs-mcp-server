@@ -3,6 +3,10 @@
 
 A Model Context Protocol (MCP) server that provides search access to Prisma Cloud documentation. This server allows Claude and other MCP-compatible clients to search through Prisma Cloud's official documentation and API references.
 
+<a href="https://glama.ai/mcp/servers/@clarkemn/prisma-cloud-docs-mcp-server">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@clarkemn/prisma-cloud-docs-mcp-server/badge" alt="prisma-cloud-docs-mcp-server MCP server" />
+</a>
+
 ## Features
 
 - Search across Prisma Cloud documentation
