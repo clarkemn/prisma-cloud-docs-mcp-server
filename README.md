@@ -1,4 +1,5 @@
 # Prisma Cloud Docs MCP Server
+[![smithery badge](https://smithery.ai/badge/@clarkemn/prisma-cloud-docs-mcp-server)](https://smithery.ai/server/@clarkemn/prisma-cloud-docs-mcp-server)
 
 A Model Context Protocol (MCP) server that provides search access to Prisma Cloud documentation. This server allows Claude and other MCP-compatible clients to search through Prisma Cloud's official documentation and API references.
 
@@ -14,6 +15,14 @@ A Model Context Protocol (MCP) server that provides search access to Prisma Clou
 ### Option 1: From PyPI (Recommended)
 
 No installation needed! Just use `uvx` in your Claude Desktop configuration.
+
+### Installing via Smithery
+
+To install prisma-cloud-docs-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@clarkemn/prisma-cloud-docs-mcp-server):
+
+```bash
+npx -y @smithery/cli install @clarkemn/prisma-cloud-docs-mcp-server --client claude
+```
 
 ### Option 2: Development Installation
 
