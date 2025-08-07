@@ -1,5 +1,10 @@
 # Prisma Cloud Docs MCP Server
+
 [![smithery badge](https://smithery.ai/badge/@clarkemn/prisma-cloud-docs-mcp-server)](https://smithery.ai/server/@clarkemn/prisma-cloud-docs-mcp-server)
+
+<a href="https://glama.ai/mcp/servers/@clarkemn/prisma-cloud-docs-mcp-server">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@clarkemn/prisma-cloud-docs-mcp-server/badge" />
+</a>
 
 A Model Context Protocol (MCP) server that provides search access to Prisma Cloud documentation. This server allows Claude and other MCP-compatible clients to search through Prisma Cloud's official documentation and API references.
 
