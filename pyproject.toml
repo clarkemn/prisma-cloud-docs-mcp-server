@@ -1,6 +1,6 @@
 [project]
 name = "prisma-cloud-docs-mcp-server"
-version = "1.0.0"
+version = "1.0.1"
 description = "MCP server providing search access to Prisma Cloud documentation"
 readme = "README.md"
 authors = [

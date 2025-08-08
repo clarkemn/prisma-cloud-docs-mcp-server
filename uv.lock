@@ -587,7 +587,7 @@ wheels = [
 [[package]]
 name = "prisma-cloud-docs-mcp-server"
 version = "1.0.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "aiohttp" },
     { name = "beautifulsoup4" },
