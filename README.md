@@ -8,6 +8,8 @@
 
 A Model Context Protocol (MCP) server that provides search access to Prisma Cloud documentation. This server allows Claude and other MCP-compatible clients to search through Prisma Cloud's official documentation and API references.
 
+> **Note:** This server has been migrated to HTTP transport and container deployment for improved scalability and performance. The server now runs in HTTP mode when deployed via Smithery.
+
 ## Features
 
 - Search across Prisma Cloud documentation
@@ -114,8 +116,20 @@ The server provides these MCP tools:
 
 ### Running the server
 
+#### HTTP mode (Production/Smithery):
+```bash
+uv run python -m src.main
+```
+
+#### STDIO mode (Local development):
 ```bash
 uv run python server.py
+```
+
+#### Container mode:
+```bash
+docker build -t prisma-docs-server .
+docker run -p 8081:8081 -e PORT=8081 prisma-docs-server
 ```
 
 ### Installing dependencies
@@ -128,10 +142,15 @@ uv sync
 
 ```
 prisma-cloud-docs-mcp-server/
-├── server.py              # Main MCP server implementation
-├── pyproject.toml         # Project configuration
-├── uv.lock               # Dependency lock file
-└── README.md             # This file
+├── src/
+│   ├── main.py           # HTTP MCP server implementation  
+│   └── middleware.py     # Configuration middleware for Smithery
+├── server.py             # Legacy STDIO server (for local development)
+├── pyproject.toml        # Project configuration
+├── uv.lock              # Dependency lock file
+├── Dockerfile           # Container deployment
+├── smithery.yaml        # Smithery container configuration
+└── README.md            # This file
 ```
 
 ## License

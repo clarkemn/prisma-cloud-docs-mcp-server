@@ -8,10 +8,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 WORKDIR /app
 
 # Copy project files including README for packaging
-COPY pyproject.toml uv.lock server.py README.md .
+COPY pyproject.toml uv.lock README.md ./
+COPY src/ ./src/
 
 # Install the MCP server package
 RUN pip install --no-cache-dir .
 
-# Default command to run the MCP server over stdio
-CMD ["python", "server.py"]
+# Expose port for HTTP server
+EXPOSE 8081
+
+# Default command to run the MCP server over HTTP
+CMD ["python", "-m", "src.main"]
