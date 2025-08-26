@@ -95,8 +95,9 @@ class DocumentationIndexer:
                                     
                                     # Only index URLs from the same domain
                                     if urlparse(full_url).netloc == urlparse(base_url).netloc:
-                                        if full_url not in visited_urls and full_url not in urls_to_visit:
+                                        if full_url not in visited_urls and full_url not in urls_to_visit_set:
                                             urls_to_visit.append(full_url)
+                                            urls_to_visit_set.add(full_url)
                                 
                 except Exception as e:
                     print(f"Error indexing {url}: {e}")
