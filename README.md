@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/clarkemn-prisma-cloud-docs-mcp-server-badge.png)](https://mseep.ai/app/clarkemn-prisma-cloud-docs-mcp-server)
+
 # Prisma Cloud Docs MCP Server
 
 [![smithery badge](https://smithery.ai/badge/@clarkemn/prisma-cloud-docs-mcp-server)](https://smithery.ai/server/@clarkemn/prisma-cloud-docs-mcp-server)
